@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nicole's Birthday Trip 🎂</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #f8f5f0;
+      color: #333;
+    }
+
+    header {
+      background-color: #a0c4ff;
+      padding: 2rem;
+      text-align: center;
+      color: #003049;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .slideshow-container {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    .slides {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: none;
+    }
+
+    .overview, .itinerary {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #1d3557;
+      border-bottom: 2px solid #457b9d;
+      padding-bottom: 0.3rem;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+    }
+
+    .day {
+      margin: 1.5rem 0;
+      padding: 1rem;
+      background: #edf6f9;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #bde0fe;
+      color: #023047;
+      font-weight: bold;
+    }
+    .small {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .slideshow-container {
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Happy Birthday Nicole 🎉</h1>
+    <p>Moose Safari to Baxter State Park 🏞️</p>
+    <p>I love you like crazy you are my world and everything❤️</p>
+    <p class="small"> (Date TBD you gotta let me know when works best lol)</p>
+  </header>
+
+  <div class="slideshow-container">
+    <!-- Replace the src with your own image files -->
+    <img class="slides" src="Moose1.jpg" alt="Trip Photo 1">
+    <img class="slides" src="baxtar.jpg" alt="Trip Photo 2">
+    <img class="slides" src="moose2.jpg" alt="Trip Photo 3">
+  </div>
+
+  <section class="overview">
+    <h2>The Trip</h2>
+    <p>We're heading on a three/four-day journey to Baxter State Park!</p>
+    <p>Baxter state park, and the surrounding areas, has one of the highest moose population in the lower 48 states</p>
+    <img class="mini" src="moose3.jpg" alt="Trip Photo 3">
+  </section>
+
+  <section class="itinerary">
+    <h2>Itinerary</h2>
+    <div class="day">
+      <h3>Day 1 - Drive to Millinocket 🚗</h3>
+      <p>The drive is 4.5 :( hours so we will drive to portland and stop for some time to rest our leggs. Then drive up to the park. If we leave early enough possible look for moose on Thursday night</p>
+    </div>
+    <div class="day">
+      <h3>Day 2 - Baxter hiking</h3>
+      <p> Early morning moose hunt or sleep in. Go hiking afterwards. Dusk moose hunting too🦌</p>
+    </div>
+    <div class="day">
+      <h3>Day 3 - See Day 2 lol</h3>
+      <p>Timing permitting could do classes in hotel on monday and drive back monday afternoon</p>
+    </div>
+    
+    <div class="day">
+      <h3>The Ride Back 🛣️</h3>
+      <p>Stop in Augusta on way back to break up the drive</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Made with love for Nicole, from Dylan ❤️</p>
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    function showSlides() {
+      const slides = document.getElementsByClassName("slides");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000); // Change every 3 seconds
+    }
+    showSlides();
+  </script>
+
+</body>
+</html>
